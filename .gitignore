@@ -138,7 +138,6 @@ node_modules/
 __pycache__/
 db.sqlite3
 server/static/
-server/frontend/build/
 server/database/car_records.json
 server/database/dealerships.json
 server/database/reviews.json

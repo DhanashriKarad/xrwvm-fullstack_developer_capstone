@@ -146,4 +146,5 @@ STATICFILES_DIRS = [
 CSRF_TRUSTED_ORIGINS = [
     "https://dhanashri125-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai",
     "https://*.proxy.cognitiveclass.ai",
+    "https://*.onrender.com",
 ]
