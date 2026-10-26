@@ -1,2 +1,2 @@
-curl http://localhost:8000/djangoapp/logout
+curl -s http://localhost:8000/djangoapp/logout
 {"userName": ""}
