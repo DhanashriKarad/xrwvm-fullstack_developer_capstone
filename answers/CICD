@@ -1,0 +1,344 @@
+=== lint_python ===
+2026-10-26T20:41:23.7698515Z Current runner version: '2.338.0'
+2026-10-26T20:41:23.7737823Z ##[group]Runner Image Provisioner
+2026-10-26T20:41:23.7739184Z Hosted Compute Agent
+2026-10-26T20:41:23.7740366Z Version: 20261021.618
+2026-10-26T20:41:23.7741519Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-26T20:41:23.7742788Z Build Date: 2026-10-21T00:45:21Z
+2026-10-26T20:41:23.7744451Z Worker ID: {786e13a7-bdd5-456b-8d19-eaff1a712cea}
+2026-10-26T20:41:23.7745768Z Region: westcentralus
+2026-10-26T20:41:23.7747165Z Cloud: Azure
+2026-10-26T20:41:23.7748171Z ##[endgroup]
+2026-10-26T20:41:23.7750493Z ##[group]Operating System
+2026-10-26T20:41:23.7751721Z Ubuntu
+2026-10-26T20:41:23.7752586Z 24.04.5
+2026-10-26T20:41:23.7753488Z LTS
+2026-10-26T20:41:23.7754431Z ##[endgroup]
+2026-10-26T20:41:23.7755430Z ##[group]Runner Image
+2026-10-26T20:41:23.7756771Z Image: ubuntu-24.04
+2026-10-26T20:41:23.7758037Z Version: 20261012.334.1
+2026-10-26T20:41:23.7760284Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-26T20:41:23.7763034Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-26T20:41:23.7765053Z ##[endgroup]
+2026-10-26T20:41:23.7767379Z ##[group]GITHUB_TOKEN Permissions
+2026-10-26T20:41:23.7770419Z Contents: read
+2026-10-26T20:41:23.7771380Z Metadata: read
+2026-10-26T20:41:23.7772982Z Packages: read
+2026-10-26T20:41:23.7774044Z ##[endgroup]
+2026-10-26T20:41:23.7777405Z Secret source: Actions
+2026-10-26T20:41:23.7779127Z Cache mode: write
+2026-10-26T20:41:23.7780847Z Prepare workflow directory
+2026-10-26T20:41:23.8123130Z Prepare all required actions
+2026-10-26T20:41:23.8174028Z Getting action download info
+2026-10-26T20:41:24.1262748Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-26T20:41:24.2544051Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-26T20:41:24.4401334Z Complete job name: lint_python
+2026-10-26T20:41:24.5260112Z ##[group]Run actions/checkout@v4
+2026-10-26T20:41:24.5261051Z with:
+2026-10-26T20:41:24.5261720Z   repository: DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:24.5266206Z   token: ***
+2026-10-26T20:41:24.5266656Z   ssh-strict: true
+2026-10-26T20:41:24.5267310Z   ssh-user: git
+2026-10-26T20:41:24.5267768Z   persist-credentials: true
+2026-10-26T20:41:24.5268284Z   clean: true
+2026-10-26T20:41:24.5268745Z   sparse-checkout-cone-mode: true
+2026-10-26T20:41:24.5269281Z   fetch-depth: 1
+2026-10-26T20:41:24.5269717Z   fetch-tags: false
+2026-10-26T20:41:24.5270167Z   show-progress: true
+2026-10-26T20:41:24.5270629Z   lfs: false
+2026-10-26T20:41:24.5271058Z   submodules: false
+2026-10-26T20:41:24.5271515Z   set-safe-directory: true
+2026-10-26T20:41:24.5272030Z   allow-unsafe-pr-checkout: false
+2026-10-26T20:41:24.5272812Z ##[endgroup]
+2026-10-26T20:41:24.6310423Z Syncing repository: DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:24.6313306Z ##[group]Getting Git version info
+2026-10-26T20:41:24.6314988Z Working directory is '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-10-26T20:41:24.6317477Z [command]/usr/bin/git version
+2026-10-26T20:41:24.6420589Z git version 2.55.0
+2026-10-26T20:41:24.6445959Z ##[endgroup]
+2026-10-26T20:41:24.6463469Z Temporarily overriding HOME='/home/runner/work/_temp/224c34f6-6cec-414a-81cc-cd93734f48cc' before making global git config changes
+2026-10-26T20:41:24.6466274Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T20:41:24.6471351Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:24.6529440Z Deleting the contents of '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-10-26T20:41:24.6536128Z ##[group]Initializing the repository
+2026-10-26T20:41:24.6541600Z [command]/usr/bin/git init /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:24.6660749Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-26T20:41:24.6662110Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-26T20:41:24.6663230Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-26T20:41:24.6664147Z hint: call:
+2026-10-26T20:41:24.6664642Z hint:
+2026-10-26T20:41:24.6665259Z hint: 	git config --global init.defaultBranch <name>
+2026-10-26T20:41:24.6666023Z hint:
+2026-10-26T20:41:24.6666741Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-26T20:41:24.6668311Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-26T20:41:24.6669256Z hint:
+2026-10-26T20:41:24.6669762Z hint: 	git branch -m <name>
+2026-10-26T20:41:24.6670341Z hint:
+2026-10-26T20:41:24.6671160Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-26T20:41:24.6678418Z Initialized empty Git repository in /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/.git/
+2026-10-26T20:41:24.6688969Z [command]/usr/bin/git remote add origin https://github.com/DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:24.6742824Z ##[endgroup]
+2026-10-26T20:41:24.6744175Z ##[group]Disabling automatic garbage collection
+2026-10-26T20:41:24.6748375Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-26T20:41:24.6787584Z ##[endgroup]
+2026-10-26T20:41:24.6788352Z ##[group]Setting up auth
+2026-10-26T20:41:24.6797218Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T20:41:24.6837582Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T20:41:24.7223726Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T20:41:24.7267834Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T20:41:24.7508359Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T20:41:24.7550404Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T20:41:24.7784645Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T20:41:24.7828394Z ##[endgroup]
+2026-10-26T20:41:24.7829635Z ##[group]Fetching the repository
+2026-10-26T20:41:24.7839254Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1c1d6d0c293ade0411a55c3c2cdeba9d6ccfbcbc:refs/remotes/origin/main
+2026-10-26T20:41:25.7100654Z From https://github.com/DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:25.7102269Z  * [new ref]         1c1d6d0c293ade0411a55c3c2cdeba9d6ccfbcbc -> origin/main
+2026-10-26T20:41:25.7138735Z ##[endgroup]
+2026-10-26T20:41:25.7140651Z ##[group]Determining the checkout info
+2026-10-26T20:41:25.7142754Z ##[endgroup]
+2026-10-26T20:41:25.7144282Z [command]/usr/bin/git sparse-checkout disable
+2026-10-26T20:41:25.7178949Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-26T20:41:25.7215590Z ##[group]Checking out the ref
+2026-10-26T20:41:25.7220517Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-26T20:41:25.7429012Z Switched to a new branch 'main'
+2026-10-26T20:41:25.7432231Z branch 'main' set up to track 'origin/main'.
+2026-10-26T20:41:25.7454157Z ##[endgroup]
+2026-10-26T20:41:25.7488833Z [command]/usr/bin/git log -1 --format=%H
+2026-10-26T20:41:25.7515453Z 1c1d6d0c293ade0411a55c3c2cdeba9d6ccfbcbc
+2026-10-26T20:41:25.7896583Z ##[group]Run actions/setup-python@v5
+2026-10-26T20:41:25.7898042Z with:
+2026-10-26T20:41:25.7898886Z   python-version: 3.11
+2026-10-26T20:41:25.7899864Z   check-latest: false
+2026-10-26T20:41:25.7911675Z   token: ***
+2026-10-26T20:41:25.7912844Z   update-environment: true
+2026-10-26T20:41:25.7913932Z   allow-prereleases: false
+2026-10-26T20:41:25.7914976Z   freethreaded: false
+2026-10-26T20:41:25.7915919Z ##[endgroup]
+2026-10-26T20:41:25.9293019Z ##[group]Installed versions
+2026-10-26T20:41:25.9388908Z (node:2356) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-26T20:41:25.9394221Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-26T20:41:25.9398298Z Successfully set up CPython (3.11.17)
+2026-10-26T20:41:25.9401607Z ##[endgroup]
+2026-10-26T20:41:25.9618234Z ##[group]Run pip install flake8
+2026-10-26T20:41:25.9620177Z [36;1mpip install flake8[0m
+2026-10-26T20:41:25.9978340Z shell: /usr/bin/bash -e {0}
+2026-10-26T20:41:25.9979695Z env:
+2026-10-26T20:41:25.9980964Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:25.9983137Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-26T20:41:25.9985329Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:25.9987677Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:25.9989552Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:25.9991228Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-26T20:41:25.9992603Z ##[endgroup]
+2026-10-26T20:41:26.9898216Z Collecting flake8
+2026-10-26T20:41:27.0853645Z   Downloading flake8-7.4.1-py2.py3-none-any.whl.metadata (3.8 kB)
+2026-10-26T20:41:27.1136313Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+2026-10-26T20:41:27.1336127Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2026-10-26T20:41:27.1626378Z Collecting pycodestyle<2.16.0,>=2.15.0 (from flake8)
+2026-10-26T20:41:27.1826670Z   Downloading pycodestyle-2.15.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-10-26T20:41:27.2139097Z Collecting pyflakes<4.1.0,>=4.0.0 (from flake8)
+2026-10-26T20:41:27.2330554Z   Downloading pyflakes-4.0.3-py2.py3-none-any.whl.metadata (3.7 kB)
+2026-10-26T20:41:27.2571364Z Downloading flake8-7.4.1-py2.py3-none-any.whl (57 kB)
+2026-10-26T20:41:27.2987123Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2026-10-26T20:41:27.3212943Z Downloading pycodestyle-2.15.0-py2.py3-none-any.whl (31 kB)
+2026-10-26T20:41:27.3450283Z Downloading pyflakes-4.0.3-py2.py3-none-any.whl (66 kB)
+2026-10-26T20:41:27.4008568Z Installing collected packages: pyflakes, pycodestyle, mccabe, flake8
+2026-10-26T20:41:27.5689794Z 
+2026-10-26T20:41:27.5699329Z Successfully installed flake8-7.4.1 mccabe-0.7.0 pycodestyle-2.15.0 pyflakes-4.0.3
+2026-10-26T20:41:27.5727511Z 
+2026-10-26T20:41:27.5728198Z [notice] A new release of pip is available: 26.2.1 -> 26.2.2
+2026-10-26T20:41:27.5728991Z [notice] To update, run: pip install --upgrade pip
+2026-10-26T20:41:27.6231683Z ##[group]Run flake8 server/djangoapp --exclude=migrations,microservices --max-line-length=120 --count --show-source --statistics
+2026-10-26T20:41:27.6232737Z [36;1mflake8 server/djangoapp --exclude=migrations,microservices --max-line-length=120 --count --show-source --statistics[0m
+2026-10-26T20:41:27.6301356Z shell: /usr/bin/bash -e {0}
+2026-10-26T20:41:27.6301657Z env:
+2026-10-26T20:41:27.6301980Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:27.6302523Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-26T20:41:27.6303053Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:27.6303508Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:27.6303968Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-26T20:41:27.6304431Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-26T20:41:27.6304831Z ##[endgroup]
+2026-10-26T20:41:27.8767921Z 0
+2026-10-26T20:41:27.9081569Z Post job cleanup.
+2026-10-26T20:41:28.0310322Z (node:2398) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-26T20:41:28.0420682Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-26T20:41:28.0542129Z Post job cleanup.
+2026-10-26T20:41:28.1448131Z [command]/usr/bin/git version
+2026-10-26T20:41:28.1492997Z git version 2.55.0
+2026-10-26T20:41:28.1533106Z Temporarily overriding HOME='/home/runner/work/_temp/c26b44f2-5dd6-4550-9b3f-9b596d08bbfe' before making global git config changes
+2026-10-26T20:41:28.1534590Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T20:41:28.1539006Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:28.1579020Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T20:41:28.1618445Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T20:41:28.1878535Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T20:41:28.1923618Z http.https://github.com/.extraheader
+2026-10-26T20:41:28.1926682Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-26T20:41:28.1967766Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T20:41:28.2246203Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T20:41:28.2287717Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T20:41:28.2682737Z Cleaning up orphan processes
+2026-10-26T20:41:28.3062845Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
+=== lint_js ===
+2026-10-26T20:41:22.6863152Z Current runner version: '2.338.0'
+2026-10-26T20:41:22.6900005Z ##[group]Runner Image Provisioner
+2026-10-26T20:41:22.6901331Z Hosted Compute Agent
+2026-10-26T20:41:22.6902557Z Version: 20261021.618
+2026-10-26T20:41:22.6903730Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-26T20:41:22.6905028Z Build Date: 2026-10-21T00:45:21Z
+2026-10-26T20:41:22.6906213Z Worker ID: {88b275d4-ce77-4d94-8c6c-d228493044ba}
+2026-10-26T20:41:22.6907396Z Region: eastus
+2026-10-26T20:41:22.6908354Z Cloud: Azure
+2026-10-26T20:41:22.6909279Z ##[endgroup]
+2026-10-26T20:41:22.6912027Z ##[group]Operating System
+2026-10-26T20:41:22.6913175Z Ubuntu
+2026-10-26T20:41:22.6913992Z 24.04.5
+2026-10-26T20:41:22.6914836Z LTS
+2026-10-26T20:41:22.6915830Z ##[endgroup]
+2026-10-26T20:41:22.6916745Z ##[group]Runner Image
+2026-10-26T20:41:22.6917855Z Image: ubuntu-24.04
+2026-10-26T20:41:22.6918800Z Version: 20261012.334.1
+2026-10-26T20:41:22.6921054Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-26T20:41:22.6924049Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-26T20:41:22.6925837Z ##[endgroup]
+2026-10-26T20:41:22.6928218Z ##[group]GITHUB_TOKEN Permissions
+2026-10-26T20:41:22.6931362Z Contents: read
+2026-10-26T20:41:22.6932575Z Metadata: read
+2026-10-26T20:41:22.6933527Z Packages: read
+2026-10-26T20:41:22.6934442Z ##[endgroup]
+2026-10-26T20:41:22.6937429Z Secret source: Actions
+2026-10-26T20:41:22.6939086Z Cache mode: write
+2026-10-26T20:41:22.6940544Z Prepare workflow directory
+2026-10-26T20:41:22.7427911Z Prepare all required actions
+2026-10-26T20:41:22.7499583Z Getting action download info
+2026-10-26T20:41:22.9505218Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-26T20:41:23.0775461Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-10-26T20:41:23.2782081Z Complete job name: lint_js
+2026-10-26T20:41:23.3667043Z ##[group]Run actions/checkout@v4
+2026-10-26T20:41:23.3667936Z with:
+2026-10-26T20:41:23.3668523Z   repository: DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:23.3673103Z   token: ***
+2026-10-26T20:41:23.3673623Z   ssh-strict: true
+2026-10-26T20:41:23.3674125Z   ssh-user: git
+2026-10-26T20:41:23.3674624Z   persist-credentials: true
+2026-10-26T20:41:23.3675176Z   clean: true
+2026-10-26T20:41:23.3675676Z   sparse-checkout-cone-mode: true
+2026-10-26T20:41:23.3676253Z   fetch-depth: 1
+2026-10-26T20:41:23.3676740Z   fetch-tags: false
+2026-10-26T20:41:23.3677236Z   show-progress: true
+2026-10-26T20:41:23.3677745Z   lfs: false
+2026-10-26T20:41:23.3678215Z   submodules: false
+2026-10-26T20:41:23.3678723Z   set-safe-directory: true
+2026-10-26T20:41:23.3679287Z   allow-unsafe-pr-checkout: false
+2026-10-26T20:41:23.3680213Z ##[endgroup]
+2026-10-26T20:41:23.4754982Z Syncing repository: DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:23.4757973Z ##[group]Getting Git version info
+2026-10-26T20:41:23.4759723Z Working directory is '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-10-26T20:41:23.4762237Z [command]/usr/bin/git version
+2026-10-26T20:41:23.4829566Z git version 2.55.0
+2026-10-26T20:41:23.4866876Z ##[endgroup]
+2026-10-26T20:41:23.4876840Z Temporarily overriding HOME='/home/runner/work/_temp/73572fb5-4b2e-460f-a978-0f7776ffe80a' before making global git config changes
+2026-10-26T20:41:23.4879735Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T20:41:23.4882827Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:23.4943699Z Deleting the contents of '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+2026-10-26T20:41:23.4949479Z ##[group]Initializing the repository
+2026-10-26T20:41:23.4956809Z [command]/usr/bin/git init /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:23.5102559Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-26T20:41:23.5104515Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-26T20:41:23.5106333Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-26T20:41:23.5107750Z hint: call:
+2026-10-26T20:41:23.5108688Z hint:
+2026-10-26T20:41:23.5109755Z hint: 	git config --global init.defaultBranch <name>
+2026-10-26T20:41:23.5110985Z hint:
+2026-10-26T20:41:23.5112339Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-26T20:41:23.5114164Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-26T20:41:23.5115559Z hint:
+2026-10-26T20:41:23.5117552Z hint: 	git branch -m <name>
+2026-10-26T20:41:23.5118551Z hint:
+2026-10-26T20:41:23.5119781Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-26T20:41:23.5122291Z Initialized empty Git repository in /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/.git/
+2026-10-26T20:41:23.5126874Z [command]/usr/bin/git remote add origin https://github.com/DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:23.5185645Z ##[endgroup]
+2026-10-26T20:41:23.5187087Z ##[group]Disabling automatic garbage collection
+2026-10-26T20:41:23.5188265Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-26T20:41:23.5216824Z ##[endgroup]
+2026-10-26T20:41:23.5218194Z ##[group]Setting up auth
+2026-10-26T20:41:23.5228153Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T20:41:23.5268549Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T20:41:23.5680315Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T20:41:23.5718421Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T20:41:23.5951127Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T20:41:23.5992109Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T20:41:23.6231013Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T20:41:23.6275980Z ##[endgroup]
+2026-10-26T20:41:23.6276815Z ##[group]Fetching the repository
+2026-10-26T20:41:23.6287035Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1c1d6d0c293ade0411a55c3c2cdeba9d6ccfbcbc:refs/remotes/origin/main
+2026-10-26T20:41:23.9321385Z From https://github.com/DhanashriKarad/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:23.9323694Z  * [new ref]         1c1d6d0c293ade0411a55c3c2cdeba9d6ccfbcbc -> origin/main
+2026-10-26T20:41:23.9327183Z ##[endgroup]
+2026-10-26T20:41:23.9328054Z ##[group]Determining the checkout info
+2026-10-26T20:41:23.9329235Z ##[endgroup]
+2026-10-26T20:41:23.9336804Z [command]/usr/bin/git sparse-checkout disable
+2026-10-26T20:41:23.9392754Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-26T20:41:23.9427258Z ##[group]Checking out the ref
+2026-10-26T20:41:23.9431591Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-26T20:41:23.9636312Z Switched to a new branch 'main'
+2026-10-26T20:41:23.9642590Z branch 'main' set up to track 'origin/main'.
+2026-10-26T20:41:23.9653548Z ##[endgroup]
+2026-10-26T20:41:23.9702796Z [command]/usr/bin/git log -1 --format=%H
+2026-10-26T20:41:23.9731482Z 1c1d6d0c293ade0411a55c3c2cdeba9d6ccfbcbc
+2026-10-26T20:41:24.0082259Z ##[group]Run actions/setup-node@v4
+2026-10-26T20:41:24.0083189Z with:
+2026-10-26T20:41:24.0083755Z   node-version: 20
+2026-10-26T20:41:24.0084398Z   always-auth: false
+2026-10-26T20:41:24.0085071Z   check-latest: false
+2026-10-26T20:41:24.0095004Z   token: ***
+2026-10-26T20:41:24.0095597Z ##[endgroup]
+2026-10-26T20:41:24.1552380Z Attempting to download 20...
+2026-10-26T20:41:24.1671563Z (node:2242) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-26T20:41:24.1676109Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-26T20:41:24.5930906Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+2026-10-26T20:41:24.9795667Z Extracting ...
+2026-10-26T20:41:24.9922412Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/27d66310-aaf4-46eb-bd86-81dfbad239be -f /home/runner/work/_temp/9fb618d7-0f61-4fd8-8725-6ffd3dcbb021
+2026-10-26T20:41:25.9968236Z Adding to the cache ...
+2026-10-26T20:41:27.8037093Z ##[group]Environment details
+2026-10-26T20:41:28.0474082Z node: v20.20.2
+2026-10-26T20:41:28.0475294Z npm: 10.8.2
+2026-10-26T20:41:28.0475744Z yarn: 1.22.22
+2026-10-26T20:41:28.0476475Z ##[endgroup]
+2026-10-26T20:41:28.0686535Z ##[group]Run npm install -g jshint
+2026-10-26T20:41:28.0687014Z [36;1mnpm install -g jshint[0m
+2026-10-26T20:41:28.0992973Z shell: /usr/bin/bash -e {0}
+2026-10-26T20:41:28.0993424Z ##[endgroup]
+2026-10-26T20:41:29.2996937Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-26T20:41:29.3332246Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-26T20:41:29.6011291Z 
+2026-10-26T20:41:29.6012653Z added 31 packages in 1s
+2026-10-26T20:41:29.6013091Z 
+2026-10-26T20:41:29.6033182Z 3 packages are looking for funding
+2026-10-26T20:41:29.6035961Z   run `npm fund` for details
+2026-10-26T20:41:29.6171617Z ##[group]Run jshint --config .jshintrc server/database/app.js
+2026-10-26T20:41:29.6172453Z [36;1mjshint --config .jshintrc server/database/app.js[0m
+2026-10-26T20:41:29.6239977Z shell: /usr/bin/bash -e {0}
+2026-10-26T20:41:29.6240260Z ##[endgroup]
+2026-10-26T20:41:29.7540662Z Post job cleanup.
+2026-10-26T20:41:29.8836806Z (node:2297) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-26T20:41:29.8838323Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-26T20:41:29.9035428Z Post job cleanup.
+2026-10-26T20:41:29.9996232Z [command]/usr/bin/git version
+2026-10-26T20:41:30.0053184Z git version 2.55.0
+2026-10-26T20:41:30.0113344Z Temporarily overriding HOME='/home/runner/work/_temp/875a4284-7a47-4950-ae1d-b31b1e0d2b5e' before making global git config changes
+2026-10-26T20:41:30.0115471Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T20:41:30.0117474Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+2026-10-26T20:41:30.0153869Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T20:41:30.0226318Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T20:41:30.0505169Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T20:41:30.0544387Z http.https://github.com/.extraheader
+2026-10-26T20:41:30.0560235Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-26T20:41:30.0598606Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T20:41:30.0915359Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T20:41:30.0971572Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T20:41:30.1478136Z Cleaning up orphan processes
+2026-10-26T20:41:30.1889763Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
