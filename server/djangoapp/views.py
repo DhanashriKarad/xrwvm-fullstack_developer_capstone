@@ -46,3 +46,14 @@ def registration(request):
                                     email=email)
     login(request, user)
     return JsonResponse({"userName": username, "status": "Authenticated"})
+
+
+def get_cars(request):
+    from .models import CarMake, CarModel
+    from .populate import initiate
+    if CarMake.objects.count() == 0:
+        initiate()
+    car_models = CarModel.objects.select_related('car_make')
+    cars = [{"CarModel": cm.name, "CarMake": cm.car_make.name}
+            for cm in car_models]
+    return JsonResponse({"CarModels": cars})
